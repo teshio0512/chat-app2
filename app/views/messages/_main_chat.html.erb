@@ -4,7 +4,7 @@
       <%= @room.name %>
     </div>
     <div class="close-room">
-      <%= link_to 'チャットを終了する', '#', class: "close-room-btn" %>
+      <%= link_to 'チャットを終了する', room_path(@room), data:{turbo_method: :delete}, class: "close-room-btn" %>
     </div>
   </div>
 <div class="main-medium">
