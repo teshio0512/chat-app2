@@ -7,27 +7,9 @@
       <%= link_to 'チャットを終了する', '#', class: "close-room-btn" %>
     </div>
   </div>
-  <div class="main-medium">
-    <div class="message">
-      <div class="message-top">
-        <div class="message-username">Hiroya</div>
-        <div class="message-time">2024/9/6(Fri) 21:20:30</div>
-      </div>
-      <div class="message-bottom">
-        <div class="message-text">ねむい・・・</div>
-      </div>
-    </div>
-    <div class="message">
-      <div class="message-top">
-        <div class="message-username">Tom</div>
-        <div class="message-time">2024/9/6(Fri) 21:21:22</div>
-      </div>
-      <div class="message-bottom">
-        <div class="message-text">わかる</div>
-      </div>
-    </div>
-  </div>
-
+<div class="main-medium">
+  <%= render partial:'message', collection: @messages %>
+</div>
 <div class="main-bottom">
   <%= form_with model:[@room, @message], html:{class:"input-form"}, local: true do |f| %>
     <div class="form">
